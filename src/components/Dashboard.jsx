@@ -35,20 +35,21 @@ const stats = [
   },
   {
     label: "Children Reached",
-    value: 9,
+    value: 533000,
     description: "Through direct programs and government partnerships",
   },
   {
     label: "Girls & Women Reached",
-    value: 300,
+    value: 28000,
     description: "Through mothers' groups and other programs",
   },
   {
     label: "Youth Reached",
-    value: 118,
+    value: 318000,
     description: "Through vocational/non-vocational courses",
   },
 ];
+
 
 const Counter = ({ end, label, description, trigger }) => {
   const [count, setCount] = useState(0);
@@ -80,7 +81,7 @@ const Counter = ({ end, label, description, trigger }) => {
   return (
     <div className="flex flex-col items-center">
       <p className="text-lg font-medium mt-2 text-[#414042]">{label}</p>
-      <h3 className="text-5xl font-bold text-[#f97906] mt-2">{count}</h3>
+      <h3 className="text-5xl font-bold text-[#f97906] mt-2">{count.toLocaleString("en-IN")}</h3>
       <p className="text-xl text-[#414042]">{description}</p>
     </div>
   );
